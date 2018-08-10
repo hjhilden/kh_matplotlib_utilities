@@ -6,15 +6,7 @@ import matplotlib.pyplot as plt
 import matplotlib.patches as mpatches
 import copy
 
-def cm2inch(*tupl):
-    inch = 2.54000508001
-    if isinstance(tupl[0], tuple):
-        return tuple(i/inch for i in tupl[0])
-    else:
-        if len(tupl)==1:
-            return tupl[0]/inch
-        else:
-            return tuple(i/inch for i in tupl)
+
 
 def label(xy, text):
     y = xy[1] + 1.5  # shift y-value for label so that it's below the artist
